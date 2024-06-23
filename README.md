@@ -72,3 +72,12 @@ python3 infer.py --pretrained_lora_local_path "checkpoints/pytorch_lora_weights.
 
 In replicate.txt file you can see some of the pictures examples how the prompt and negative prompt are created, which seed and lora alpha to use to have the mentioned picture.
 
+## Usage with controlnet
+
+I have added script to use this style with controlnet depth detectors, which is in beta version in sence of generations, but it produces very well results for beta version
+You can use them in scripts by running this script
+
+```
+python3 usage_with_controlnet.py --lora_path "/home/jupyter/sdxl-ft/modern_marble_sculptures_rvxl/pytorch_lora_weights.safetensors" --image_path_or_link ../morgan-alley-OQCsYSs6q98-unsplash.jpg 
+```
+
