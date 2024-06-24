@@ -33,11 +33,3 @@ class DescriptorLLMClient:
                 entry = {"file_name": file.split("/")[-1], "prompt": desc}
                 json.dump(entry, outfile)
                 outfile.write("\n")
-
-
-DescriptorLLMClient(
-    model_name="gemini-1.5-flash", system_instruction=system_prompt
-).create_hf_custom_dataset(
-    images_folder="/home/jupyter/sdxl-ft/data/instance_data_dir/",
-    metadata_path="/home/jupyter/sdxl-ft/data/instance_data_dir/",
-)
